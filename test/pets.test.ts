@@ -5,9 +5,8 @@ describe('Pets api', function () {
 
   let server: Server
 
-  beforeEach(async () => {
-    server = await createApp({ testing: true })
-    await server.initialize()
+  beforeAll(async () => {
+    server = await createApp()
   })
 
   test('can create a pet', async () => {

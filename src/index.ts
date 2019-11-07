@@ -5,7 +5,7 @@ async function run () {
   server.start()
 
   console.log('server started', server.info.port)
-  console.log(server.table())
+  console.log(server.table().map(entry => ({ method: entry.method, path: entry.path })))
 }
 
 run()
